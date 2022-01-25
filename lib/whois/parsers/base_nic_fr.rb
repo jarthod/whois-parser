@@ -25,6 +25,7 @@ module Whois
           when "registered" then :registered
           when "redemption" then :redemption
           when "blocked"    then :inactive
+          when "deleted"    then :deleted
           # The 'frozen' status seems to be a status
           # where a registered domain is placed to prevent changes
           # and/or when changes can't be made.
