@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -16,8 +16,8 @@ module Whois
     # Parser for the whois.netcom.cm server.
     class WhoisNetcomCm < BaseCocca
 
-      self.status_mapping.merge!({
-          "suspended" => :registered
+      status_mapping.merge!({
+          "suspended" => :registered,
       })
 
     end

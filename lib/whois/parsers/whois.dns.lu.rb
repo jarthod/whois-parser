@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -26,11 +26,11 @@ module Whois
 
       property_supported :status do
         if content_for_scanner =~ /domaintype:\s+(.+)\n/
-          case $1.downcase
+          case ::Regexp.last_match(1).downcase
           when "active"
             :registered
           else
-            Whois::Parser.bug!(ParserError, "Unknown status `#{$1}'.")
+            Whois::Parser.bug!(ParserError, "Unknown status `#{::Regexp.last_match(1)}'.")
           end
         else
           :available
@@ -49,7 +49,7 @@ module Whois
       property_supported :created_on do
         if content_for_scanner =~ /registered:\s+(.*)\n/
           # Force the parser to use the dd/mm/yyyy format.
-          Time.utc(*$1.split("/").reverse)
+          Time.utc(*::Regexp.last_match(1).split("/").reverse)
         end
       end
 
@@ -62,7 +62,7 @@ module Whois
         if name = value_for_key('registrar-name')
           Parser::Registrar.new(
               name:         name,
-              url:          value_for_key('registrar-url'),
+              url:          value_for_key('registrar-url')
           )
         end
       end
@@ -83,7 +83,7 @@ module Whois
       property_supported :nameservers do
         values_for_key('nserver').map do |line|
           if line =~ /(.+) \[(.+)\]/
-            Parser::Nameserver.new(name: $1, ipv4: $2)
+            Parser::Nameserver.new(name: ::Regexp.last_match(1), ipv4: ::Regexp.last_match(2))
           else
             Parser::Nameserver.new(name: line)
           end
@@ -94,18 +94,18 @@ module Whois
       private
 
       def build_contact(element, type)
-        if name = value_for_key('%s-name' % element)
-          Parser::Contact.new(
-              type:         type,
-              id:           nil,
-              name:         name,
-              address:      value_for_key('%s-address' % element),
-              city:         value_for_key('%s-city' % element),
-              zip:          value_for_key('%s-zipcode' % element),
-              country_code: value_for_key('%s-country' % element),
-              email:        value_for_key('%s-email' % element)
-          )
-        end
+        return unless (name = value_for_key(format("%s-name", element)))
+
+        Parser::Contact.new(
+            type:         type,
+            id:           nil,
+            name:         name,
+            address:      value_for_key(format("%s-address", element)),
+            city:         value_for_key(format("%s-city", element)),
+            zip:          value_for_key(format("%s-zipcode", element)),
+            country_code: value_for_key(format("%s-country", element)),
+            email:        value_for_key(format("%s-email", element))
+        )
       end
 
       def value_for_key(key)

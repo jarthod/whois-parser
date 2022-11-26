@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -30,17 +30,15 @@ module Whois
       property_supported :status do
         if response_incomplete?
           :incomplete
+        elsif available?
+          :available
         else
-          if available?
-            :available
-          else
-            :registered
-          end
+          :registered
         end
       end
 
       property_supported :available? do
-         (!response_incomplete? && !!(content_for_scanner =~ /No match for/))
+        (!response_incomplete? && !!(content_for_scanner =~ /No match for/))
       end
 
       property_supported :registered? do

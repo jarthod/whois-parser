@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -54,7 +54,7 @@ module Whois
             # NEWSTATUS invalid
             :invalid
           else
-            Whois::Parser.bug!(ParserError, "Unknown status `#{node("Status")}'.")
+            Whois::Parser.bug!(ParserError, "Unknown status `#{node('Status')}'.")
           end
         end
       end
@@ -130,7 +130,7 @@ module Whois
       def version
         cached_properties_fetch :version do
           if content_for_scanner =~ /^% Version: (.+)$/
-            $1
+            ::Regexp.last_match(1)
           end
         end
       end

@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -44,7 +44,7 @@ module Whois
       #   # => :supported
       #
       def self.property_state(property)
-        self._properties[property]
+        _properties[property]
       end
 
       # Check if the +property+ passed as symbol
@@ -65,9 +65,9 @@ module Whois
       #
       def self.property_state?(property, status = :any)
         if status == :any
-          self._properties.key?(property)
+          _properties.key?(property)
         else
-          self._properties[property] == status
+          _properties[property] == status
         end
       end
 
@@ -79,7 +79,7 @@ module Whois
       # @return [void]
       #
       def self.property_register(property, status)
-        self._properties = self._properties.merge({ property => status })
+        self._properties = _properties.merge({ property => status })
       end
 
 

@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -161,10 +161,10 @@ module Whois
     #   # => "WhoisNicInfoIt"
     #
     def self.host_to_parser(host)
-      host.to_s.downcase.
-        gsub(/[.-]/, '_').
-        gsub(/(?:^|_)(.)/) { $1.upcase }.
-        gsub(/\A(\d+)\z/)  { "Host#{$1}" }
+      host.to_s.downcase
+          .gsub(/[.-]/, '_')
+          .gsub(/(?:^|_)(.)/) { ::Regexp.last_match(1).upcase }
+          .gsub(/\A(\d+)\z/)  { "Host#{::Regexp.last_match(1)}" }
     end
 
     # Requires the file at <tt>whois/parsers/#{name}</tt>.
@@ -279,7 +279,7 @@ module Whois
       end
 
       equal?(other) ||
-      parsers.size == other.parsers.size && all_in_parallel?(parsers, other.parsers) { |one, two| one.unchanged?(two) }
+      (parsers.size == other.parsers.size && all_in_parallel?(parsers, other.parsers) { |one, two| one.unchanged?(two) })
     end
 
 
@@ -434,6 +434,7 @@ module Whois
 
       while index < count
         return false unless yield(*args.map { |arg| arg[index] })
+
         index += 1
       end
       true

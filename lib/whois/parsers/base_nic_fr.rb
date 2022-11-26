@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -20,7 +20,7 @@ module Whois
 
       property_supported :status do
         if content_for_scanner =~ /status:\s+(.+)\n/
-          case $1.downcase
+          case ::Regexp.last_match(1).downcase
           when "active"     then :registered
           when "registered" then :registered
           when "redemption" then :redemption
@@ -34,7 +34,7 @@ module Whois
           # This is the case of second level names.
           when "not_open"   then :reserved
           else
-            Whois::Parser.bug!(ParserError, "Unknown status `#{$1}'.")
+            Whois::Parser.bug!(ParserError, "Unknown status `#{::Regexp.last_match(1)}'.")
           end
         else
           :available
@@ -84,8 +84,8 @@ module Whois
       property_supported :nameservers do
         content_for_scanner.scan(/nserver:\s+(.+)\n/).flatten.map do |line|
           if line =~ /(.+) \[(.+)\]/
-            name = $1
-            ips  = $2.split(/\s+/)
+            name = ::Regexp.last_match(1)
+            ips  = ::Regexp.last_match(2).split(/\s+/)
             ipv4 = ips.find { |ip| Whois::Server.send(:valid_ipv4?, ip) }
             ipv6 = ips.find { |ip| Whois::Server.send(:valid_ipv6?, ip) }
             Parser::Nameserver.new(:name => name, :ipv4 => ipv4, :ipv6 => ipv6)
@@ -105,15 +105,15 @@ module Whois
 
       private
 
-      MULTIVALUE_KEYS = %w( address )
+      MULTIVALUE_KEYS = %w[address]
 
       def parse_contact(element, type)
         return unless content_for_scanner =~ /#{element}:\s+(.+)\n/
 
-        id = $1
+        id = ::Regexp.last_match(1)
         content_for_scanner.scan(/nic-hdl:\s+#{id}\n((.+\n)+)\n/).any? ||
             Whois::Parser.bug!(ParserError, "Unable to parse contact block for nic-hdl: #{id}")
-        values = build_hash($1.scan(/(.+?):\s+(.+?)\n/))
+        values = build_hash(::Regexp.last_match(1).scan(/(.+?):\s+(.+?)\n/))
 
         if values["type"] == "ORGANIZATION"
           name = nil

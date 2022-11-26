@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -22,7 +22,7 @@ module Whois
 
       property_supported :domain do
         if content_for_scanner =~ /Domain Name:\s+(.+)\n/
-          $1.downcase
+          ::Regexp.last_match(1).downcase
         end
       end
 
@@ -48,7 +48,7 @@ module Whois
 
       property_supported :created_on do
         if content_for_scanner =~ /Creation Date:\s+(.+)\n/
-          DateTime.strptime($1, "%d/%m/%y").to_time
+          DateTime.strptime(::Regexp.last_match(1), "%d/%m/%y").to_time
         end
       end
 
@@ -56,7 +56,7 @@ module Whois
 
       property_supported :expires_on do
         if content_for_scanner =~ /Expiration Date:\s+(.+)\n/
-          DateTime.strptime($1, "%d/%m/%y").to_time
+          DateTime.strptime(::Regexp.last_match(1), "%d/%m/%y").to_time
         end
       end
 
@@ -70,7 +70,7 @@ module Whois
         if content_for_scanner =~ /Registrant Name:\s+(.+)\n/
           Parser::Contact.new(
               type:         Parser::Contact::TYPE_REGISTRANT,
-              name:         $1.to_s.strip,
+              name:         ::Regexp.last_match(1).to_s.strip,
           )
         end
       end

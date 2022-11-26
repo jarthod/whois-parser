@@ -23,8 +23,8 @@ module Whois
       tokenizer :scan_disclaimer do
         if @input.match?(/# Copyright/)
           lines = []
-          while @input.scan(/#(.*)\n\n?/)
-            lines << @input[1].strip unless @input[1].strip == ""
+          while @input.scan(/#(.*)\n\n?/) # rubocop:disable Style/WhileUntilModifier
+            lines << @input[1].strip if @input[1].strip != ""
           end
           @ast["field:disclaimer"] = lines.join(" ")
         end

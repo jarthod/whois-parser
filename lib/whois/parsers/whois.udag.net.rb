@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -20,7 +20,7 @@ module Whois
     #
     class WhoisUdagNet < BaseIcannCompliant
       self.scanner = Scanners::BaseIcannCompliant, {
-          pattern_available: /^We could not find the requested domain on our system/
+          pattern_available: /^We could not find the requested domain on our system/,
       }
     end
 

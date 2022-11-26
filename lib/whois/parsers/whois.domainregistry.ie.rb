@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -48,7 +48,7 @@ module Whois
             :available
           end
         else
-          Whois::Parser.bug!(ParserError, "Unknown status `#{node("status")}'.")
+          Whois::Parser.bug!(ParserError, "Unknown status `#{node('status')}'.")
         end
       end
 
@@ -107,6 +107,7 @@ module Whois
       def build_contact(element, type)
         Array(node(element)).map do |id|
           next unless (contact = node("field:#{id}"))
+
           Parser::Contact.new(
             :type         => type,
             :id           => id,

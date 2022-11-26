@@ -3,7 +3,7 @@
 This project uses [Semantic Versioning 2.0.0](http://semver.org/).
 
 
-#### master
+#### Release 2.0.0
 
 - CHANGED: Adding ruby 3 to the test suite + updating jruby and remove it from the allowed failures
 - FIX: Fixed .SO parser not loading correctly under jRuby
@@ -25,7 +25,8 @@ This project uses [Semantic Versioning 2.0.0](http://semver.org/).
 - CHANGED: Standardize a bit more the Registar object by always filling the name first (instead of sometimes filling organisation instead and sometimes duplicate both). Only fill "organization" when it's a real different property provided by the whois server.
 - FIX: AFNIC parsers date format to avoid returning negative dates (#119) Thanks @itghlu
 - CHANGED: Updated .IN.UA parsers to the latest response. (#69, #135) Thanks @Vanav and @jarthod
-- CHANGED: Minimum Ruby version 2.3
+- CHANGED: Minimum Ruby version 2.6
+- FIXED: Addressed security issues with eval and YAML.load. Thanks Francis Beaudoin
 
 
 #### Release 1.2.0

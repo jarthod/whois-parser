@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -43,7 +43,7 @@ module Whois
           :registered
         when /^pendingtransfer/
           :registered
-        when /redemption\-/
+        when /redemption-/
           :redemption
         when "pending-delete"
           :redemption

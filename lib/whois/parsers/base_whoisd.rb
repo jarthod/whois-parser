@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -101,8 +101,8 @@ module Whois
         lines = node_nsset['nserver'] rescue nil
         Array(lines).map do |line|
           if line =~ /(.+) \((.+)\)/
-            name = $1
-            ipv4, ipv6 = $2.split(', ')
+            name = ::Regexp.last_match(1)
+            ipv4, ipv6 = ::Regexp.last_match(2).split(', ')
             Parser::Nameserver.new(:name => name, :ipv4 => ipv4, :ipv6 => ipv6)
           else
             Parser::Nameserver.new(:name => line.strip)
@@ -114,7 +114,7 @@ module Whois
       private
 
       def node_nsset
-        node("node:nsset/#{node("nsset")}")
+        node("node:nsset/#{node('nsset')}")
       end
 
       def build_contact(element, type)
@@ -140,5 +140,5 @@ module Whois
 
     end
 
-end
+  end
 end

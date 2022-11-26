@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -21,7 +21,7 @@ module Whois
     class WhoisWildwestdomainsCom < BaseIcannCompliant
 
       self.scanner = Scanners::BaseIcannCompliant, {
-          pattern_available: /^Domain (.+) is not registered here.\n/
+          pattern_available: /^Domain (.+) is not registered here.\n/,
       }
 
 

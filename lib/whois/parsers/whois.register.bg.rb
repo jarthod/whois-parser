@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -26,11 +26,11 @@ module Whois
 
       property_supported :status do
         if content_for_scanner =~ /registration status:\s+(.+?)\n/
-          case $1.downcase
+          case ::Regexp.last_match(1).downcase
           when "registered"
             :registered
           else
-            Whois::Parser.bug!(ParserError, "Unknown status `#{$1}'.")
+            Whois::Parser.bug!(ParserError, "Unknown status `#{::Regexp.last_match(1)}'.")
           end
         else
           :available
@@ -48,7 +48,7 @@ module Whois
 
       property_supported :created_on do
         if content_for_scanner =~ /activated on:\s+(.*?)\n/
-          parse_time($1)
+          parse_time(::Regexp.last_match(1))
         end
       end
 
@@ -56,16 +56,16 @@ module Whois
 
       property_supported :expires_on do
         if content_for_scanner =~ /expires at:\s+(.*?)\n/
-          parse_time($1)
+          parse_time(::Regexp.last_match(1))
         end
       end
 
 
       property_supported :nameservers do
         if content_for_scanner =~ /NAME SERVER INFORMATION:\n((.+\n)+)\s+\n/
-          $1.split("\n").map do |line|
+          ::Regexp.last_match(1).split("\n").map do |line|
             if line =~ /(.+) \((.+)\)/
-              Parser::Nameserver.new(:name => $1, :ipv4 => $2)
+              Parser::Nameserver.new(:name => ::Regexp.last_match(1), :ipv4 => ::Regexp.last_match(2))
             else
               Parser::Nameserver.new(:name => line.strip)
             end

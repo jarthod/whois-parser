@@ -3,7 +3,7 @@
 #
 # An intelligent pure Ruby WHOIS client and parser.
 #
-# Copyright (c) 2009-2018 Simone Carletti <weppos@weppos.net>
+# Copyright (c) 2009-2022 Simone Carletti <weppos@weppos.net>
 #++
 
 
@@ -21,7 +21,7 @@ module Whois
     class WhoisRegistryOm < BaseShared1
 
       self.scanner = Scanners::BaseShared1, {
-          pattern_reserved: /^Restricted\n/
+          pattern_reserved: /^Restricted\n/,
       }
 
 

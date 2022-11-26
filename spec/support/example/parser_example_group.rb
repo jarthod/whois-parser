@@ -30,10 +30,10 @@ RSpec::Matchers.define :cache_property do |property|
   end
 end
 
-RSpec::configure do |c|
+RSpec.configure do |c|
   def c.escaped_path(*parts)
     /#{parts.join('\/')}/
   end
 
-  c.include ParserExampleGroup, file_path: c.escaped_path(%w( spec whois parsers ))
+  c.include ParserExampleGroup, file_path: c.escaped_path(%w[spec whois parsers])
 end
