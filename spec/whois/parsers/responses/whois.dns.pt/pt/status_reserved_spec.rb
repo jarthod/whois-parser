@@ -23,9 +23,10 @@ describe "whois.dns.pt", :aggregate_failures do
     expect(subject.available?).to eq(false)
     expect(subject.registered?).to eq(true)
     expect(subject.created_on).to be_a(Time)
-    expect(subject.created_on).to eq(DateTime.parse("2009-02-09 00:00:00 UTC"))
+    expect(subject.created_on).to eq(DateTime.parse("2015-05-07 23:40:09 UTC"))
     expect { subject.updated_on }.to raise_error(Whois::AttributeNotSupported)
-    expect(subject.expires_on).to eq(nil)
+    expect(subject.expires_on).to be_a(Time)
+    expect(subject.expires_on).to eq(DateTime.parse("2026-05-06 23:59:09 UTC"))
     expect(subject.nameservers).to be_a(Array)
     expect(subject.nameservers).to eq([])
   end
