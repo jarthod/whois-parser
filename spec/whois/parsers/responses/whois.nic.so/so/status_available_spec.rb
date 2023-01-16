@@ -19,7 +19,8 @@ describe "whois.nic.so", :aggregate_failures do
   end
 
   it "matches status_available.expected" do
-    expect(subject.status).to eq([])
+    expect(subject.domain).to eq("u34jedzcq.so")
+    expect(subject.status).to eq(:available)
     expect(subject.available?).to eq(true)
     expect(subject.registered?).to eq(false)
     expect(subject.created_on).to eq(nil)
