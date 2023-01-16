@@ -5,6 +5,7 @@ This project uses [Semantic Versioning 2.0.0](http://semver.org/).
 
 #### Release 2.0.0
 
+- FIX: Updated parser for .CL tld
 - FIX: Updated parser for .PT tld
 - CHANGED: Adding ruby 3 to the test suite + updating jruby and remove it from the allowed failures
 - FIX: Fixed .SO parser not loading correctly under jRuby

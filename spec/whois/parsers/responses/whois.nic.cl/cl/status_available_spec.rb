@@ -22,8 +22,6 @@ describe "whois.nic.cl", :aggregate_failures do
     expect(subject.status).to eq(:available)
     expect(subject.available?).to eq(true)
     expect(subject.registered?).to eq(false)
-    expect { subject.created_on }.to raise_error(Whois::AttributeNotSupported)
-    expect { subject.expires_on }.to raise_error(Whois::AttributeNotSupported)
     expect(subject.nameservers).to be_a(Array)
     expect(subject.nameservers).to eq([])
   end
