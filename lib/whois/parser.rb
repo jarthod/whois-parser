@@ -138,7 +138,7 @@ module Whois
     rescue LoadError
       # Some WHOIS services like Donuts Inc covers hundred of TLDs (https://donuts.domains/what-we-do/top-level-domain-portfolio/)
       # But using one host per TLD, so in this case it's easier to match on the disclaimer directly to cover all hosts
-      if part.body&.include?("Terms of Use: Donuts Inc.")
+      if part.body&.include?("Terms of Use: Identity Digital Inc.")
         autoload("donuts_inc")
       elsif part.body&.include?("The Whois and RDAP services are provided by CentralNic")
         autoload("central_nic")

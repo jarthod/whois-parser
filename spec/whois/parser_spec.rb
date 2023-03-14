@@ -33,7 +33,7 @@ describe Whois::Parser do
     end
 
     it "returns the DonutsInc parser if the parser doesn't exist and the body contains Donuts disclaimer" do
-      expect(described_class.parser_klass(Whois::Record::Part.new(host: "whois.nic.domains", body: "Terms of Use: Donuts Inc."))).to eq(Whois::Parsers::DonutsInc)
+      expect(described_class.parser_klass(Whois::Record::Part.new(host: "whois.nic.domains", body: "Terms of Use: Identity Digital Inc."))).to eq(Whois::Parsers::DonutsInc)
     end
 
     it "returns the blank parser if the parser doesn't exist" do

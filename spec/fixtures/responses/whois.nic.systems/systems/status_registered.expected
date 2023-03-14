@@ -32,7 +32,7 @@
   %s %CLASS{registrar}
   %s.id           == "9998"
   %s.name         == "Donuts Internal (9998)"
-  %s.url          == "http://www.donuts.co"
+  %s.url          == "https://identity.digital"
 
 #registrant_contacts
   %s %CLASS{array}

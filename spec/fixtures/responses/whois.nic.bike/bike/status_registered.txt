@@ -1,26 +1,23 @@
-Domain Name: whereismy.bike
-Registry Domain ID: e25432d5c94440c4a8ca0e5ecbc13904-DONUTS
-Registrar WHOIS Server: whois.godaddy.com/
-Registrar URL: http://www.godaddy.com/domains/search.aspx?ci=8990
-Updated Date: 2021-04-12T16:49:14Z
-Creation Date: 2016-02-26T16:49:10Z
-Registry Expiry Date: 2022-02-26T16:49:10Z
-Registrar: GoDaddy.com, LLC
-Registrar IANA ID: 146
-Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.4806242505
-Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
-Domain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited
+Domain Name: bike.bike
+Registry Domain ID: a864ce4015614eeda646a4121b91c784-DONUTS
+Registrar WHOIS Server: whois.101domain.com
+Registrar URL: http://101domain.com
+Updated Date: 2022-09-02T17:01:11Z
+Creation Date: 2015-07-19T17:01:03Z
+Registry Expiry Date: 2023-07-19T17:01:03Z
+Registrar: 101domain GRS Limited
+Registrar IANA ID: 1011
+Registrar Abuse Contact Email: abuse@101domain.com
+Registrar Abuse Contact Phone: +1.7604448674
 Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
-Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
 Registry Registrant ID: REDACTED FOR PRIVACY
 Registrant Name: REDACTED FOR PRIVACY
-Registrant Organization: 
+Registrant Organization: Digital Privacy Corporation
 Registrant Street: REDACTED FOR PRIVACY
 Registrant City: REDACTED FOR PRIVACY
-Registrant State/Province: Croatia
+Registrant State/Province: CA
 Registrant Postal Code: REDACTED FOR PRIVACY
-Registrant Country: HR
+Registrant Country: US
 Registrant Phone: REDACTED FOR PRIVACY
 Registrant Phone Ext: REDACTED FOR PRIVACY
 Registrant Fax: REDACTED FOR PRIVACY
@@ -52,13 +49,13 @@ Tech Phone Ext: REDACTED FOR PRIVACY
 Tech Fax: REDACTED FOR PRIVACY
 Tech Fax Ext: REDACTED FOR PRIVACY
 Tech Email: Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
-Name Server: ns67.domaincontrol.com
-Name Server: ns68.domaincontrol.com
+Name Server: ns1.gagarin2501.hospedagemdesites.ws
+Name Server: ns2.gagarin2501.hospedagemdesites.ws
 DNSSEC: unsigned
 URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
->>> Last update of WHOIS database: 2021-12-06T16:26:41Z <<<
+>>> Last update of WHOIS database: 2023-03-14T15:30:01Z <<<
 
 For more information on Whois status codes, please visit https://icann.org/epp
 
-Terms of Use: Donuts Inc. provides this Whois service for information purposes, and to assist persons in obtaining information about or related to a domain name registration record. Donuts does not guarantee its accuracy. Users accessing the Donuts Whois service agree to use the data only for lawful purposes, and under no circumstances may this data be used to: a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the registrar's own existing customers and b) enable high volume, automated, electronic processes that send queries or data to the systems of Donuts or any ICANN-accredited registrar, except as reasonably necessary to register domain names or modify existing registrations. When using the Donuts Whois service, please consider the following: The Whois service is not a replacement for standard EPP commands to the SRS service. Whois is not considered authoritative for registered domain objects. The Whois service may be scheduled for downtime during production or OT&E maintenance periods. Queries to the Whois services are throttled. If too many queries are received from a single IP address within a specified time, the service will begin to reject further queries for a period of time to prevent disruption of Whois service access. Abuse of the Whois system through data mining is mitigated by detecting and limiting bulk query access from single sources. Where applicable, the presence of a [Non-Public Data] tag indicates that such data is not made publicly available due to applicable data privacy laws or requirements. Should you wish to contact the registrant, please refer to the Whois records available through the registrar URL listed above. Access to non-public data may be provided, upon request, where it can be reasonably confirmed that the requester holds a specific legitimate interest and a proper legal basis for accessing the withheld data
-. Access to this data can be requested by submitting a request via the form found at https://donuts.domains/about/policies/whois-layered-access/ Donuts Inc. reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+Terms of Use: Identity Digital Inc. provides this Whois service for information purposes, and to assist persons in obtaining information about or related to a domain name registration record. Identity Digital does not guarantee its accuracy. Users accessing the Identity Digital Whois service agree to use the data only for lawful purposes, and under no circumstances may this data be used to: a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the registrar's own existing customers and b) enable high volume, automated, electronic processes that send queries or data to the systems of Identity Digital or any ICANN-accredited registrar, except as reasonably necessary to register domain names or modify existing registrations. When using the Identity Digital Whois service, please consider the following: The Whois service is not a replacement for standard EPP commands to the SRS service. Whois is not considered authoritative for registered domain objects. The Whois service may be scheduled for downtime during production or OT&E maintenance periods. Queries to the Whois services are throttled. If too many queries are received from a single IP address within a specified time, the service will begin to reject further queries for a period of time to prevent disruption of Whois service access. Abuse of the Whois system through data mining is mitigated by detecting and limiting bulk query access from single sources. Where applicable, the presence of a [Non-Public Data] tag indicates that such data is not made publicly available due to applicable data privacy laws or requirements. Should you wish to contact the registrant, please refer to the Whois records available through the registrar URL listed above. Access to non-public data may be provided, upon request, where it can be reasonably confirmed that the requester holds a specific legitimate interest and a 
+proper legal basis for accessing the withheld data. Access to this data can be requested by submitting a request via the form found at https://www.identity.digital/about/policies/whois-layered-access/ Identity Digital Inc. reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.

@@ -33,7 +33,7 @@ describe "whois.nic.systems", :aggregate_failures do
     expect(subject.registrar).to be_a(Whois::Parser::Registrar)
     expect(subject.registrar.id).to eq("9998")
     expect(subject.registrar.name).to eq("Donuts Internal (9998)")
-    expect(subject.registrar.url).to eq("http://www.donuts.co")
+    expect(subject.registrar.url).to eq("https://identity.digital")
     expect(subject.registrant_contacts).to be_a(Array)
     expect(subject.registrant_contacts.size).to eq(1)
     expect(subject.registrant_contacts[0]).to be_a(Whois::Parser::Contact)

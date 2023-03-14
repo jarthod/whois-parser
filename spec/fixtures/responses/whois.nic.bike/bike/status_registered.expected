@@ -1,8 +1,8 @@
 #domain
-  %s == "whereismy.bike"
+  %s == "bike.bike"
 
 #domain_id
-  %s == "e25432d5c94440c4a8ca0e5ecbc13904-DONUTS"
+  %s == "a864ce4015614eeda646a4121b91c784-DONUTS"
 
 
 #status
@@ -17,22 +17,22 @@
 
 #created_on
   %s %CLASS{time}
-  %s %TIME{2016-02-26 16:49:10 UTC}
+  %s %TIME{2015-07-19 17:01:03 UTC}
 
 #updated_on
   %s %CLASS{time}
-  %s %TIME{2021-04-12 16:49:14 UTC}
+  %s %TIME{2022-09-02 17:01:11 UTC}
 
 #expires_on
   %s %CLASS{time}
-  %s %TIME{2022-02-26 16:49:10 UTC}
+  %s %TIME{2023-07-19 17:01:03 UTC}
 
 
 #registrar
   %s %CLASS{registrar}
-  %s.id           == "146"
-  %s.name         == "GoDaddy.com, LLC"
-  %s.url          == "http://www.godaddy.com/domains/search.aspx?ci=8990"
+  %s.id           == "1011"
+  %s.name         == "101domain GRS Limited"
+  %s.url          == "http://101domain.com"
 
 
 #registrant_contacts
@@ -42,12 +42,12 @@
   %s[0].type          == Whois::Parser::Contact::TYPE_REGISTRANT
   %s[0].id            == "REDACTED FOR PRIVACY"
   %s[0].name          == "REDACTED FOR PRIVACY"
-  %s[0].organization  == ""
+  %s[0].organization  == "Digital Privacy Corporation"
   %s[0].address       == "REDACTED FOR PRIVACY"
   %s[0].city          == "REDACTED FOR PRIVACY"
   %s[0].zip           == "REDACTED FOR PRIVACY"
-  %s[0].state         == "Croatia"
-  %s[0].country_code  == "HR"
+  %s[0].state         == "CA"
+  %s[0].country_code  == "US"
   %s[0].phone         == "REDACTED FOR PRIVACY ext: REDACTED FOR PRIVACY"
   %s[0].fax           == "REDACTED FOR PRIVACY ext: REDACTED FOR PRIVACY"
   %s[0].email         == "Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name."
@@ -91,6 +91,6 @@
   %s %CLASS{array}
   %s %SIZE{2}
   %s[0] %CLASS{nameserver}
-  %s[0].name == "ns67.domaincontrol.com"
+  %s[0].name == "ns1.gagarin2501.hospedagemdesites.ws"
   %s[1] %CLASS{nameserver}
-  %s[1].name == "ns68.domaincontrol.com"
+  %s[1].name == "ns2.gagarin2501.hospedagemdesites.ws"

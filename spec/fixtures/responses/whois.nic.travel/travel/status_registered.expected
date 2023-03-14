@@ -21,18 +21,18 @@
 
 #updated_on
   %s %CLASS{time}
-  %s %TIME{2018-05-25 19:29:32 GMT}
+  %s %TIME{2022-11-18 00:00:14 GMT}
 
 #expires_on
   %s %CLASS{time}
-  %s %TIME{2022-10-03 23:59:59 GMT}
+  %s %TIME{2023-10-03 23:59:59 GMT}
 
 
 #registrar
   %s %CLASS{registrar}
   %s.id           == "9998"
   %s.name         == "Donuts Internal (9998)"
-  %s.url          == "http://www.donuts.co"
+  %s.url          == "https://identity.digital"
 
 #registrant_contacts
   %s %CLASS{array}
