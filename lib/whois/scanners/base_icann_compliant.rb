@@ -49,7 +49,7 @@ module Whois
 
       tokenizer :scan_disclaimer do
         if @input.match?(settings[:pattern_disclaimer] || /^The Service is provided/)
-          @ast["field:disclaimer"] = _scan_lines_to_array(/^(.+)\n+/).join(" ")
+          @ast["field:disclaimer"] = _scan_lines_to_array(/^%*(.+)\n+/).join(" ")
         end
       end
 

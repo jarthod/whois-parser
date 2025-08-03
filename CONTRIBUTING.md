@@ -52,3 +52,15 @@ Push to your fork and [submit a pull request](https://github.com/weppos/whois-pa
 To increase the chance that your pull request is accepted please **make sure to write tests**. Changes without corresponding tests will likely not be included as they will produce fragile code that can easily break whenever the registry changes the response format.
 
 Some examples: [84dbdde320f31c20184bcfe5e544e8fd3cd32862](https://github.com/weppos/whois/commit/84dbdde320f31c20184bcfe5e544e8fd3cd32862), [3b6688b95e6fadcf720cc777ef4bbd2cd644e62b](https://github.com/weppos/whois/commit/3b6688b95e6fadcf720cc777ef4bbd2cd644e62b)
+
+## Manual testing
+
+Here is how you can load the current development version of the code to test it:
+
+```ruby
+$ irb -I ./lib
+require 'whois-parser'
+whois = Whois::Client.new
+record = whois.lookup('google.ie')
+record.parser.expires_on
+```

@@ -5,6 +5,7 @@ This project uses [Semantic Versioning 2.0.0](http://semver.org/).
 
 #### Release 2.0.0
 
+- FIX: Updated parser for .IE tld
 - FIX: Updated parser for .RO tld
 - FIX: Fixed support for all Donuts Inc. TLDs as they rebranded to Identity Digital Inc.
 - FIX: Updated parser for .SO tld
