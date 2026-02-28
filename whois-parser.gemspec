@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.test_files       = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.extra_rdoc_files = %w( LICENSE.txt .yardopts )
 
-  s.add_dependency "whois", ">= 4.1.0"
+  s.add_dependency "whois", ">= 6.0.4"
   s.add_dependency "activesupport", ">= 4"
   s.add_dependency "ostruct"
 

@@ -1,0 +1,50 @@
+
+###############################################################################
+#
+# Welcome to the OVH WHOIS Server.
+#
+# whois server  : whois.ovh.com       check server  : check.ovh.com
+#
+# The data in this Whois is at your disposal  with the aim of supplying you the
+# information only,  that is helping you  in the obtaining  of  the information
+# about  or  related to a domain name registration record.   OVH Sas  make this
+# information available "as is", and  do not  guarantee its accuracy.  By using
+# Whois,  you agree that you will use these data  only for  legal  purposes and
+# that,  under no circumstances will you use this data to:  (1) Allow,  enable,
+# or  otherwise  support  the  transmission  of  mass  unsolicited,  commercial
+# advertisement  or  roughly  or  requests  via the  individual mail (courier),
+# the E-mail (SPAM), by telephone or by fax. (2) Enable high volume, automated,
+# electronic  processes  that  apply  to  OVH  Sas   (or its computer systems).
+# The copy,   the compilation,   the re-packaging,   the dissemination   or the
+# other  use  of  the Whois base  is  expressly  forbidden  without  the  prior
+# written consent of  OVH.  Domain  ownership  disputes should be settled using
+# ICANN's Uniform Dispute Resolution Policy: http://www.icann.org/udrp/udrp.htm
+# We reserve the right  to  modify  these  terms  at  any  time.  By submitting
+# this query,  you agree to  abide by these terms.  OVH Sas  reserves the right
+# to  terminate  your  access  to  the  OVH Sas  Whois  database  in  its  sole
+# discretion,   including   without   limitation,   for  excessive  querying of
+# the Whois database  or  for  failure  to  otherwise  abide  by  this  policy.
+#
+# L'outil du Whois  est  à  votre  disposition  dans  le  but  de  vous fournir
+# l'information  seulement,  c'est-à-dire  vous   aider   dans  l'obtention  de
+# l'information  sur ou lié à un  rapport  d'enregistrement  de nom de domaine.
+# OVH Sas rend  cette information disponible  "comme est,"  et  ne garanti pas
+# son exactitude. En utilisant  notre outil  Whois, vous  reconnaissez que vous
+# emploierez ces données seulement pour  des buts légaux et ne pas utiliser cet
+# outil dans les buts suivant: (1) la transmission de publicité non sollicitée,
+# commerciale massive ou en gros ou des sollicitations via courrier individuel,
+# le courrier électronique (c'est-à-dire SPAM),  par  téléphone ou par fax. (2)
+# l'utilisation d'un grand volume,  automatisé  des processus électroniques qui
+# soulignent ou chargent ce système de base de données  Whois  vous fournissant
+# cette  information.   La  copie   de  tout  ou  partie,   la compilation,  le
+# re-emballage,  la dissémination ou d'autre utilisation de la base Whois  sont
+# expressément interdits sans consentement écrit antérieur de OVH. Un désaccord
+# sur la possession d'un nom de domaine peut être résolu en suivant la  Uniform
+# Dispute  Resolution  Policy  de  l'ICANN:  http://www.icann.org/udrp/udrp.htm
+# Nous nous  réservons  le  droit  de  modifier  ces  termes  à tout moment. En
+# soumettant une requête au Whois vous consentez à vous soumettre à ces termes.
+
+# local time : 2026-02-27T20:54:36Z
+# gmt time : 2026-02-27T20:54:36Z
+# last modify : 2026-02-01T03:20:53Z
+

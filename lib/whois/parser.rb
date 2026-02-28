@@ -20,7 +20,6 @@ require_relative 'parser/errors'
 # These are handy convenient methods, and they are loaded by default.
 require_relative 'parser_extensions/whois'
 require_relative 'parser_extensions/whois_parser'
-
 # These extensions add most of Whois::Record parser-specific extensions
 # that were loaded by default in Whois 3. This is not recommended as it adds
 # a lot of stuff into the Whois::Record class.
