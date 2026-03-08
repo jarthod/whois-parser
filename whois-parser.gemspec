@@ -15,8 +15,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ">= 2.3"
 
   s.require_paths    = %w( lib )
-  s.files            = `git ls-files`.split("\n")
-  s.test_files       = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files            = Dir["lib/**/*", "LICENSE.txt", "CHANGELOG.md", "README.md", ".yardopts"]
   s.extra_rdoc_files = %w( LICENSE.txt .yardopts )
 
   s.add_dependency "whois", ">= 4.1.0"
